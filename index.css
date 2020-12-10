@@ -1,0 +1,68 @@
+.mark {
+  background-color: #907e61;
+  color: white;
+}
+
+.sub-header {
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin: 20px 0px 0px 150px;
+  text-align: center;
+}
+
+.name {
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 2px 0px 0px 150px;
+  text-align: center;
+}
+
+.header {
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 80px;
+  letter-spacing: 5px;
+  text-align: center;
+  margin: 30px 0px 0px 150px;
+}
+
+.body {
+  background-color: #383838;
+  width: 80%;
+}
+
+#container-title {
+  background-color: #907e61;
+  font-weight: 500;
+  letter-spacing: 5px;
+  align-self: right;
+  font-size: 20px;
+}
+
+.container {
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  font-size: 18px;
+  margin: 30px;
+}
+
+.axis {
+  font-family: Helvetica, Arial, sans-serif;
+  fill: white;
+}
+
+.axis text {
+  font-family: Helvetica, Arial, sans-serif;
+  fill: white;
+}
+
+.axis line {
+  font-family: Helvetica, Arial, sans-serif;
+  stroke: white;
+}

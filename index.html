@@ -1,0 +1,354 @@
+<html style="border: 20px solid white">
+
+<head>
+  <title>Digital Divide</title>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="index.css" />
+</head>
+
+  <body class="body">
+    <div class="header" width="100px">Data Visualization of the Digital Divide</div>
+    <div class="sub-header">in the United States and California</div>
+    <br>
+    <div class="name">CPSC 490 Senior Project - Part 2</div>
+    <div class="name">Katherine Arackaparambil</div>
+    <div class="name">Advisor: Holly Rushmeier</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-" id="container-title"> ABSTRACT </div>
+            <div class="col-sm">
+              Through the use of the Javascript Library D3.js, HTML, and CSS, this project visualizes data about access to the 
+              internet and computers in order to illustrate the Digital Divide in the United States and California. The Digital Divide 
+              is defined as the unequal access of technology to different groups based on social, demographic, or geographic factors. 
+              Due to the global pandemic, technology has become an essential part of work, communication, education, and more. Even though 
+              technology seems ubiquitous in the 21st century, many people still lack the tools to succeed in this increasingly digital 
+              environment. With new social distancing recommendations, most schools have had to transition to online learning and many 
+              offices have closed for employees. Students and families are more reliant on technology now than ever before, yet this 
+              privilege is not afforded to everyone equally. Even in California, where there is a focus on technology and innovation in 
+              the Silicon Valley, not everyone has access to these basic resources. Black, Latino, rural, and low-income households in 
+              California have been disproportionately affected, which further deepens the divide between these communities. This project 
+              utilizes census and survey data to create an interactive visualization that illustrates the disparities in access to 
+              technology and ways to close the gap.
+            </div>
+        </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-" id="container-title"> BACKGROUND </div>
+        <div class="col-sm">
+          This project further explores the work started by Amanda Lee on
+          Visualizing the Digital Divide in New York. Instead of New York, this project will focus on the United States and Calfornia
+          after the impact of the pandemic. To create this project I used D3 which is a Javascript library for data visualization. I used 
+          the skills I learned from the course Data and Information Visualization with Professor Rushmeier and Professor Brown. 
+          I hosted the HTML, CSS, and JS code on a Heroku-Server and I used VS-Code with Airbnb Style Formatting. 
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+          <div class="col-" id="container-title"> GRAPH 1 </div>
+          <div class="col-sm">
+            In the first graph, I use bar graphs to portray the percent of students in households with no internet or computer access 
+            by income from 2016 and 2020. In the second graph, I use bar graphs to illustrate the same percentage based on race. The 
+            data was collected from USA Facts and the Census Data from the American Community Survey. 
+          </div>
+          <br>
+          <div class="row">
+            <b>Design Choices</b><br>
+            Since we have the categorical variables of income and race on the x axis and the quantitative variable of percentage on the 
+            y axis, I decided to use bar graphs to represent the data in a clear and concise format. By using double bar charts grouped 
+            together, the differences between computer and internet data can be compared more easily. I also allow the user to interact 
+            with the data by having an option to view the results in alphabetical, ascending, or descending order. Hovering over the graph 
+            allows the user to see the percentages. Clicking on the button transforms the bar charts using a smooth transition. This can 
+            help the user to easily see which groups are the most and the least affected by the digital divide. 
+        </div>
+          <br>
+          <div>
+            
+            <button type="button" class="change2016">2016</button>
+            <button type="button" class="change1">Descending</button>
+            <button type="button" class="change2">Ascending</button>
+            <br><br>
+            <button type="button" class="change2020">2020</button>
+          </div>
+          <svg class="graph" id="graph1a"></svg>
+          <div>
+            <button type="button" class="c2016">2016</button>
+            <button type="button" class="change3">Alphabetical</button>
+            <button type="button" class="change4">Descending</button>
+            <button type="button" class="change5">Ascending</button>
+            <br><br>
+            <button type="button" class="c2020">2020</button>
+          </div>
+          <svg class="graph" id="graph1b"></svg>
+          <div class="row">
+            <b>Takeaways</b><br>
+            From analyzing the first graph, it is clear that lower-income households have a major disadvantage in getting access to 
+            computers and the internet. The percentage of people who lack internet or computer access consistently declines with more 
+            wealth. The graph also shows that on average, there are more people who have access to the internet than computers. Some people 
+            might have internet connection in their homes in order to use their other devices like smartphones, but computers are very 
+            expensive which might explain why some people have more difficulty accessing them than others.
+
+            <br><br>
+
+            The second graph shows that groups of people who are American Indian, Black, and Hispanic have a harder time on average 
+            getting access to the computer and internet. However, people from an caucasian or asian have a lower percentage of people 
+            who lack access to these basic needs. It is interesting to compare the data from 2016 and 2020 to see if there have been any 
+            improvements in the Digital Divide. There have been many initiatives and programs to close the gap over the last few years, 
+            however after looking at the data, it appears that the same inequalities are still present. 
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+          <div class="col-" id="container-title"> GRAPH 2 </div>
+          <div class="col-sm">
+            In the second graph, I use data from the Household Pulse Survey to look at the percentage of people that have access 
+            to a device available for educational purposes. I plotted various different categories based on age, gender, education, 
+            race, marital status, children, employment status, food sufficiency, and household income. 
+          </div>
+          <br>
+          <div class="row">
+            <b>Design Choices</b><br>
+            I used a line chart because I wanted to show the trends over time starting from April to November 2020. The Household 
+            Pulse Survey from the US Census Bureau was a new program that was designed to collect information about the impact of 
+            the global pandemic on people’s lives in the United States. The user can click on the different categories to see the 
+            results from that data presented on a line chart and the trend over time in 2020. By clicking on the different categories, 
+            the user can look at how this data changes based on the different social and demographic factors. The colors differentiate 
+            the lines and are labeled in the legend to provide more insight into the trends. By hovering over the data points, the user 
+            can see the percentages I calculated using the raw data. I took the 9 different months from 2020 and went through each 
+            spreadsheet, calculating the percentages for each category and adding it to a csv file. It was a time-consuming process to 
+            clean, aggregate, and calculate the data from multiple sources, but it was very informative once the dataset was finally 
+            visualized.
+        </div>
+          <br>
+          <div class="row" style="margin-left:150px">
+            <form id="picker">
+                <div class="button-wrapper" style="margin:10px">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-outline-secondary active">
+                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Age
+                        </label>
+                        <label class="btn btn-outline-secondary">
+                            <input type="radio" name="options" id="option2" autocomplete="off"> Gender
+                        </label>
+                        <label class="btn btn-outline-secondary">
+                            <input type="radio" name="options" id="option3" autocomplete="off"> Education
+                        </label>
+                        <label class="btn btn-outline-secondary">
+                            <input type="radio" name="options" id="option4" autocomplete="off"> Race
+                        </label>
+                        <label class="btn btn-outline-secondary">
+                          <input type="radio" name="options" id="option5" autocomplete="off"> Marital Status
+                      </label>
+                      <label class="btn btn-outline-secondary">
+                        <input type="radio" name="options" id="option6" autocomplete="off"> Children
+                      </label>
+                      <br>
+                      <label class="btn btn-outline-secondary">
+                        <input type="radio" name="options" id="option7" autocomplete="off"> Employment
+                      </label>
+                      <label class="btn btn-outline-secondary">
+                        <input type="radio" name="options" id="option8" autocomplete="off"> Food Sufficiency
+                      </label>
+                      <label class="btn btn-outline-secondary">
+                        <input type="radio" name="options" id="option9" autocomplete="off"> Household Income
+                      </label>
+                    </div>
+                </div>
+            </form>
+          </div>
+          <svg class="graph" id="graph2"></svg>
+
+          <div class="row">
+            <b>Takeaways</b><br>
+            These line graphs provide important insights into which groups have more or less access to computer devices for 
+            education based on multiple factors. For these graphs, a higher data point is better because that means a larger 
+            percentage of people have access. The age graph illustrates that people who are older have more access compared to a 
+            younger demographic. Even though children and youth are the ones who need devices for educational purposes the most, 
+            not all of them have it for connecting to their online courses.In the gender graph, there is also a slight gap between 
+            male and female ownership of devices, which reflects the gender gap in many areas of life. In the educational graph, those 
+            who have a higher educational degree like college and bachelor degree have more access to technology than students in 
+            elementary or high schools. The graphs by household income and race emphasize the same findings from the previous 
+            visualizations. The food sufficiency graph reveals that some households who don’t have enough food at home may also have a 
+            lack of connectivity to the online world. In some of the graphs there appears to be a dip in the percentages around the 
+            months of June and July. There could be multiple reasons for the drop in technological access like unemployment, but that 
+            cannot be inferred from this dataset. But overall there appears to be an upward trend on most of the graphs, which hopefully 
+            means that the divide is improving and more people are finding resources to access the internet and computers.
+          </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+          <div class="col-" id="container-title"> GRAPH 3 </div>
+          <div class="col-sm">
+            This is a choropleth map that divides up California into different counties to see how geographic location and other 
+            factors can have an impact on technology access. The centroids in each county are shown by the circles. The saturation 
+            of the colors show the broadband subscription rate in each county with the darker color indicating a higher percentage. 
+            The size of the circles correlates to the median household income. Hovering over the county also shows the covid cases in 
+            that county per 1M people on a bar graph.
+          </div>
+          <br>
+          <div class="row">
+            <b>Design Choices</b><br>
+            I used a json of the California counties and the geoAlbersUSA projection to plot the path points onto the map. Then I used 
+            data from the California Gov Open Data Portal to get more information about the average household income and then combined 
+            that with census data about the percentage of broadband subscribers in each county. I decided to use a choropleth map because 
+            I wanted to see if there were any geographic areas that had less access to the internet and if  location has an impact on 
+            technology accessibility. I also wanted to compare the broadband subscription rate to the covid cases to see if there was 
+            any correlation between them.
+         </div>
+         <br>
+         <div id="tool1" width="1000px" height="1000px"></div>
+         <br><br>
+         <svg class="graph" id="toolgraph"></svg>
+          <br>
+          <svg class="graph" id="graph3"></svg>
+          <div class="row" style="width: 1000px";>
+            <b>Takeaways</b><br>
+            It appears that the less dense and rural areas have a lighter blue color on the map which indicates that they have a 
+            lower percentage of households with broadband subscriptions. The cities like the San Francisco Bay Area also have both 
+            the largest centroid circles and darkest blue color which indicates that they have a higher median household income and 
+            more broadband subscriptions. There is such a large focus on supplying resources to large cities, but that often leaves 
+            others behind who also need it. There doesn’t appear to be a direct correlation between coronavirus cases and access to 
+            broadband services, because there are many other factors that might affect this statistic more directly.
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+          <div class="col-" id="container-title"> GRAPH 4 </div>
+          <div class="col-sm">
+            In the final map, I wanted to show how cities are taking initiatives to bridge the digital divide and to see if they 
+            were heading in the right direction. Since we know that the internet is needed in areas with low income, I used a choropleth 
+            map of the City of San Francisco divided up into its different neighborhoods. SFGov has set up multiple free Wifi hotspots 
+            in the City in an effort to give people more access if they need it. These parks and recreation centers are plotted on the map.
+          </div>
+          <br>
+          <div class="row">
+            <b>Design Choices</b><br>
+            I decided to use a map because that helps with visualizing the neighborhood better than a bar chart or line chart. I used a 
+            json of San Francisco and the geoAlbersUSA projection to build the paths and map them with D3. Then I combined that information 
+            with household income data and unemployment data from the American Community Survey census study that analyzed each neighborhood 
+            in SF. The darker blue color correlates with the average household income in that neighborhood. I researched the various places 
+            that SF was offering free Wifi hotspots and I calculated their latitude and longitude points to place them on the map. I added 
+            interaction so that they could hover over places on the map and see the names of the location.
+        </div>
+          <br>
+          <div id="tool2" width="1000px" height="1000px"></div>
+          <br>
+          <div id="toolpark" width="1000px" height="1000px"></div>
+          <br>
+          <svg class="graph" id="toolgraph2"></svg>
+          <br>
+          <svg class="graph" id="graph4"></svg>
+          
+          <br>
+          <div class="row">
+            <b>Takeaways</b><br>
+            With the Silicon Valley located in California, the West Coast is known for being a hub for technology and innovation. 
+            Especially in San Francisco, there are many initiatives to focus on Computer Science education and give people the tools 
+            and skills to access technology and increase digital literacy. However, there are still disparities between different 
+            groups within the community and a need for more laptops and digital devices at home now that it is more difficult to share 
+            between families when everyone needs access to strong internet. When schools across the state went online in Spring 2020, 
+            thousands of laptops and hotspots were needed for students to continue their education. It looks like the City is giving 
+            people Wifi Hotspots but they can still do more to spread their reach to the different neighborhoods and other parts of 
+            the city that need it. By setting up more resources to reach people in groups that have less access to the internet and 
+            computers, the government and organizations can help bridge the Digital Divide.
+          </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-" id="container-title"> CONCLUSION </div>
+        <div class="col-sm">
+          The global pandemic has brought to light many racial and socioeconomic disparities that have divided our country even further 
+          apart. Many people who might have basic necessities like food and shelter don’t have access to the internet or tech devices, 
+          which are becoming an increasingly essential part of living in the digital age. Without the internet, it becomes challenging 
+          to work, learn, grow, and connect with others in a safe way that doesn’t put lives at risk for the virus. This project allowed
+          me to visualize the digital divide and illustrate that there are still many more steps, initiatives, and programs that can be put 
+          in place to support those who need access to technology, so we can move forward and keep innovating, creating, and 
+          learning - without leaving anyone behind.
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+          <div class="col-" id="container-title"> SOURCES </div>
+          <br>
+          <div class="col-sm">
+              <div>Household Pulse Survey Data Tables</div>
+              <div style="font-size: 10px;">
+                  Bureau, US Census, Census.gov, 2020
+                  &nbsp;&nbsp;|&nbsp;&nbsp;
+                  <i>https://www.census.gov/programs-surveys/household-pulse-survey/data.html</i>
+              </div>
+              <br>
+              <div>D3.js Graph Gallery</div>
+              <div style="font-size: 10px;">
+                  D3.js Graph Gallery, Van Holtz, 2018 &nbsp;&nbsp;|&nbsp;&nbsp;
+                  <i>https://www.d3-graph-gallery.com/barplot.html</i>
+              </div>
+              <br>
+              <div>Internet Access Students at Home</div>
+              <div style="font-size: 10px;">
+                  USA Facts, September 28, 2020 &nbsp;&nbsp;|&nbsp;&nbsp;
+                  <i>https://usafacts.org/articles/internet-access-students-at-home/</i>
+              </div>
+              <br>
+              <div>San Francisco Wifi</div>
+              <div style="font-size: 10px;">
+                  SFGov, City and County of San Francisco, 2020 &nbsp;&nbsp;|&nbsp;&nbsp;
+                  <i>https://sfgov.org/sfc/sanfranciscowifi</i>
+              </div>
+              <br>
+              <div>Computer and Internet Use in the United States: 2016</div>
+              <div style="font-size: 10px;">
+                  American Community Survey, U.S. Census Bureau, 2018 &nbsp;&nbsp;|&nbsp;&nbsp;
+                  <i>https://www.census.gov/content/dam/Census/library/publications/2018/acs/ACS-39.pdf</i>
+              </div>
+              <br>
+              <div>County Centroids</div>
+              <div style="font-size: 10px;">
+                  Table of United States Counties, Wikipedia, 2010 &nbsp;&nbsp;|&nbsp;&nbsp;
+                  <i>https://en.wikipedia.org/wiki/User:Michael_J/County_table</i>
+              </div>
+              <br>
+              <div>San Francisco Neighborhoods</div>
+              <div style="font-size: 10px;">
+                  Socio-Economic Profiles, American Community Survey, 2014 &nbsp;&nbsp;|&nbsp;&nbsp;
+                  <i>https://default.sfplanning.org/publications_reports/SF_NGBD_SocioEconomic_Profiles/2010-2014_ACS_Profile_Neighborhoods_v3AH.pdf</i>
+              </div>
+              <br>
+              <div>Broadband Mapping Report</div>
+              <div style="font-size: 10px;">
+                  California Broadband Report, California Public Utilities Commission, 2011 &nbsp;&nbsp;|&nbsp;&nbsp;
+                  <i>http://iebroadband.com/Portals/0/CPUCBroadbandMappingReport.pdf</i>
+              </div>
+              <br>
+              <div>Github San Francisco Neighborhoods</div>
+              <div style="font-size: 10px;">
+                  SanFrancisco.Neighborhoods.json, Github User: cdolek, 2020 &nbsp;&nbsp;|&nbsp;&nbsp;
+                  <i>https://gist.github.com/cdolek/d08cac2fa3f6338d84ea#file-sanfrancisco-neighborhoods-json</i>
+              </div>
+              <br>
+              <div>Github California County</div>
+              <div style="font-size: 10px;">
+                  Cb_2014_us_county_5m.json, Github User: threestory, 2015 &nbsp;&nbsp;|&nbsp;&nbsp;
+                  <i>https://gist.github.com/threestory/ed0f322d7bb2e3be8ded#file-cb_2014_us_county_5m-json</i>
+              </div>
+              <br>
+          </div>
+      </div>
+  </div>
+
+</body>
+    <script src="index.js"></script>
+
+</html>
